@@ -1,0 +1,179 @@
+@import url("Colors.css");
+
+html {
+  scrollbar-width: none;
+  scrollbar-color: transparent transparent;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+body {
+  font-size: 5vw;
+}
+
+#intro {
+  display: block;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  color: var(--c1);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#intro2 {
+  display: none;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  color: var(--c1);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/*----------------------------------------------------------------------------
+/*----------------------------------INTRO-------------------------------------
+/*----------------------------------------------------------------------------*/
+.slide-in-top {
+	-webkit-animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-rotate-hor-top {
+	-webkit-animation: slide-rotate-hor-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-rotate-hor-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@-webkit-keyframes slide-rotate-hor-top {
+  0% {
+    -webkit-transform: translateY(0) rotateX(0deg);
+            transform: translateY(0) rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(-150px) rotateX(-90deg);
+            transform: translateY(-150px) rotateX(-90deg);
+  }
+}
+@keyframes slide-rotate-hor-top {
+  0% {
+    -webkit-transform: translateY(0) rotateX(0deg);
+            transform: translateY(0) rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(-150px) rotateX(-90deg);
+            transform: translateY(-150px) rotateX(-90deg);
+  }
+}
+
+.text-focus-in {
+	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+.puff-out-center {
+	-webkit-animation: puff-out-center 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) both;
+	        animation: puff-out-center 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) both;
+}
+@-webkit-keyframes puff-out-center {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    opacity: 0;
+  }
+}
+@keyframes puff-out-center {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    opacity: 0;
+  }
+}
+
+
+.color-change-2x {
+	-webkit-animation: color-change-2x 4s linear infinite both;
+	        animation: color-change-2x 4s linear infinite both;
+}
+@-webkit-keyframes color-change-2x {
+  0% {
+    background: var(--c2);
+  }
+  100% {
+    background: var(--c3);
+  }
+}
+@keyframes color-change-2x {
+  0% {
+    background: var(--c2);
+  }
+  100% {
+    background: var(--c3);
+  }
+}

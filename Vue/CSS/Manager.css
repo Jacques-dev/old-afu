@@ -1,0 +1,102 @@
+
+@import url("Colors.css");
+
+#manager {
+
+}
+
+#manager nav {
+  display: flex;
+  /* justify-content: center; */
+}
+#manager nav > ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  display: flex !important;
+  flex-wrap: wrap !important;
+}
+#manager nav > ul > li {
+  position: relative;
+}
+#manager nav > ul > li:hover > ul {
+  opacity: 1;
+  top: 100%;
+  transition: 0.3s;
+  pointer-events: auto;
+}
+#manager nav > ul > li > ul {
+  position: absolute;
+  top: 80%;
+  margin: 0;
+  left: -5px;
+  opacity: 0;
+  transition: 0.3s;
+  pointer-events: none;
+}
+#manager nav > ul > li > ul:before {
+  display: block;
+  position: absolute;
+  height: 10px;
+  width: 100%;
+  top: -5px;
+}
+#manager nav > ul > li > ul li {
+  margin: 5px;
+  padding: 20px 40px;
+  cursor: pointer;
+  border: 1px solid #1e1548;
+  border-radius: 5px;
+  position: relative;
+}
+#manager nav > ul > li > ul li:hover > ul {
+  opacity: 1;
+  left: 100%;
+  transition: 0.3s;
+  pointer-events: auto;
+}
+#manager nav > ul > li > ul li ul {
+  position: absolute;
+  pointer-events: none;
+  top: -5px;
+  left: 150%;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+#manager ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#manager ul li {
+  margin: 5px;
+  padding: 20px 40px;
+  cursor: pointer;
+  border: 1px solid #1e1548;
+  border-radius: 5px;
+  /* width: 90px; */
+  background-color: white;
+}
+#manager ul li:hover {
+  background-color: #c8c8c8;
+  z-index: 2;
+}
+
+#manager .downTag:before {
+  display: block;
+  position: absolute;
+  top: calc(50% - 3px);
+  right: 10px;
+  border: 10px solid transparent;
+  border-top: 10px solid black;
+}
+
+#manager .rightTag:before {
+  display: block;
+  position: absolute;
+  top: calc(50% - 10px);
+  right: 10px;
+  border: 11px solid transparent;
+  border-left: 11px solid black;
+}

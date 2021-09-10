@@ -1,0 +1,20 @@
+
+@import url("Colors.css");
+
+.formResearch1, .formResearch2 {
+  margin: 25px 0 !important;
+}
+
+.formResearch2 {
+  border-bottom: 1px solid var(--c4);
+}
+
+.research-container-title {
+  padding: 10px;
+}
+
+.research-container {
+  background-color: var(--c4);
+  border-radius: 10px;
+  padding: 10px;
+}
