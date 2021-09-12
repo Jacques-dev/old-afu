@@ -1,7 +1,5 @@
 <?php
   include("../BDD/Connexion.php");
-  include("../Controller/Fonctions.php");
-  render("Header", ["activePage" => $page]);
   $apiv3 = $_SESSION["apiv3"];
   // show($apiv3);
 ?>

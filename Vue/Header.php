@@ -102,9 +102,13 @@
                   <img class="nav-link <?= $activePage === 'Home' ? 'active' : '' ?>" src="IMAGES/logo1.png" id="logo1">
                 </a>
               </li>
-              <a class="navbarSub1" href="Body?page=Contact">Nous contacter</a>
+              <li class="nav-item">
+                <a class="nav-link navbarSub1 <?= $activePage === 'Contact' ? 'active' : '' ?>" href="Body?page=Contact">Nous contacter</a>
+              </li>
               <?php if(isset($_SESSION["email"])): ?>
-                <a class="navbarSub1 <?= $activePage === 'Management' ? 'active' : '' ?>" href="Management.php">Management</a>
+                <li class="nav-item">
+                  <a class="nav-link navbarSub1 <?= $activePage === 'Management' ? 'active' : '' ?>" href="Body?page=Management">Management</a>
+                </li>
               <?php endif; ?>
             </ul>
           </div>

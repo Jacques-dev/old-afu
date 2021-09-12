@@ -72,15 +72,10 @@ html, body {
   /* background-color: var(--c2) !important; */
 }
 .navbarSub1 {
-  padding: 10px;
   border-radius: 15px;
   margin-left: 10px !important;
+  height: 100%;
   color: var(--c3) !important;
-}
-.navbarSub1:hover {
-  text-decoration: none;
-  color: var(--blanc) !important;
-  background-color: var(--gris_o2) !important;
 }
 .navbar-nav {
   border-radius: 15px;
