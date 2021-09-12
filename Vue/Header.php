@@ -7,7 +7,7 @@
     include("../Controller/StartAPI.php");
     include("../Controller/StartMarks.php");
   }
-  
+
   include("../BDD/Connexion.php");
 
   if (isset($_SESSION["cookie"])) {
@@ -103,17 +103,15 @@
                 </a>
               </li>
               <a class="navbarSub1" href="Body?page=Contact">Nous contacter</a>
-              <?php if(isset($_SESSION["email"]) && isset($_SESSION["manager"])): ?>
-                <li class="nav-item">
-                  <a class="nav-link <?= $activePage === 'Management' ? 'active' : '' ?>" href="Management.php">Management</a>
-                </li>
+              <?php if(isset($_SESSION["email"])): ?>
+                <a class="navbarSub1 <?= $activePage === 'Management' ? 'active' : '' ?>" href="Management.php">Management</a>
               <?php endif; ?>
             </ul>
           </div>
 
           <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
             <ul class="navbar-nav ml-auto">
-              <?php if(isset($_SESSION["email"]) && !isset($_SESSION["manager"]) ): ?>
+              <?php if(isset($_SESSION["email"])): ?>
                 <li class="nav-item">
                   <a class="nav-link <?= $activePage === 'Profil' ? 'active' : '' ?>" href="Body?page=Profil"><?= $_SESSION["profil"]["firstname"]; ?></a>
                 </li>
@@ -127,7 +125,7 @@
         <nav id="navbarSub2" class="navbar navbar-expand-md">
           <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
             <ul class="navbar-nav mr-auto">
-              <?php if(isset($_SESSION["email"]) && !isset($_SESSION["manager"])): ?>
+              <?php if(isset($_SESSION["email"])): ?>
                 <li class="nav-item">
                   <a class="nav-link <?= $activePage === 'MarksForm' ? 'active' : '' ?>" href="Body?page=MarksForm">Mes notes</a>
                 </li>

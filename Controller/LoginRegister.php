@@ -18,22 +18,15 @@
         $sqll = "SELECT id, firstname, name, school, promotion, td_group, confidentiality FROM student WHERE email = '$email'";
         // $notes = "SELECT mark, type FROM student_marks WHERE student = '$email'";
         // show($sql_count_student);
-        $sqlll = "SELECT school FROM manager WHERE email = '$email'";
 
         $result = $con->query($sql);
         $resultt = $con->query($sqll);
-        $resulttt = $con->query($sqlll);
         // $result_marks = $con->query($sqll);
 
         // $rowww = $result_marks->fetch_assoc();
 
         $row = $result->fetch_assoc();
         $roww = $resultt->fetch_assoc();
-        $rowww = $resulttt->fetch_assoc();
-
-        if (checkIfIsManager($email)){
-          $_SESSION["manager"] = "manager";
-        }
 
         if ($result->num_rows == 1) {
 
@@ -74,31 +67,25 @@
             //   $_SESSION["global_infos"] = $global_infos;
             // show($_SESSION["global_infos"]["nb_student"]);
             // die();
-            if (! checkIfIsManager($email)){
-              $profil = array (
-                "id" => $roww["id"],
-                "firstname" => $roww["firstname"],
-                "name" => $roww["name"],
-                "school" => $roww["school"],
-                "td_group" => $roww["td_group"],
-                "promotion" => $roww["promotion"],
-                "confidentiality" => $roww["confidentiality"]
-              );
-            } else {
-              $profil = array (
-                "school" => $rowww["school"]
-              );
-            }
 
-              // $marks = array(
-              //   "mark" => $rowww["mark"],
-              //   "mark_type" => $rowww["mark_type"],
-              //   "student" => $rowww["student"]
-              // );
-              // $_SESSION["marks"] = $marks;
+            // $marks = array(
+            //   "mark" => $rowww["mark"],
+            //   "mark_type" => $rowww["mark_type"],
+            //   "student" => $rowww["student"]
+            // );
+            // $_SESSION["marks"] = $marks;
 
-              $_SESSION["profil"] = $profil;
-            // }
+            $profil = array (
+              "id" => $roww["id"],
+              "firstname" => $roww["firstname"],
+              "name" => $roww["name"],
+              "school" => $roww["school"],
+              "td_group" => $roww["td_group"],
+              "promotion" => $roww["promotion"],
+              "confidentiality" => $roww["confidentiality"]
+            );
+
+            $_SESSION["profil"] = $profil;
 
             $_SESSION["email"] = $email;
 
@@ -108,10 +95,6 @@
               $time = time()*60*60*24*365;  //STOCKS 1 YEAR IN THE VAR
               $_SESSION["cookie"] = array($email, $row['password'], $time);
             }
-
-            // if (checkIfIsManager($email)) {
-            //   $_SESSION["manager"] = true;
-            // }
 
           } else {
             $popupResult = array("type" => "warning", "title" => "Attention", "message" => "Mot de passe incorrect.");

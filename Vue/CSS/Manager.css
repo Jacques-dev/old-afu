@@ -2,7 +2,7 @@
 @import url("Colors.css");
 
 #manager {
-
+  color: var(--noir);
 }
 
 #manager nav {
@@ -77,10 +77,12 @@
   border-radius: 5px;
   /* width: 90px; */
   background-color: white;
+
 }
 #manager ul li:hover {
   background-color: #c8c8c8;
   z-index: 2;
+
 }
 
 #manager .downTag:before {

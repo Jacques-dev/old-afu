@@ -4,14 +4,8 @@
   render("Header", ["activePage" => $page]);
   $apiv3 = $_SESSION["apiv3"];
   // show($apiv3);
-  // show($_SESSION["load"]);
 ?>
 
-
-<form action="../Controller/Manager.php" method="post" id="loadDataForm">
-  <input type="submit" name="save" id="saveData" value="Sauvegarder">
-  <input type="file" onchange="submitLoadData()" name="load" id="loadData" value="Charger">
-</form>
 
 <form id="addElementInSchool" action="../Controller/Manager.php" method="post">
   <button type="submit" name="submitManagerEditing">Tout Enregistrer</button>

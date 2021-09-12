@@ -26,20 +26,6 @@
     return (!preg_match( "^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$^", $email)) ? false : true;
   }
 
-  function checkIfIsManager($email) {
-    include("../BDD/Connexion.php");
-    $sql = "SELECT * FROM manager WHERE email = '$email'";
-
-    $result = $con->query($sql);
-
-    if ($result->num_rows === 1){
-      return true;
-    }
-
-    return false;
-
-  }
-
   function render(string $view, $parameters = []) {
     extract($parameters);
     include("{$view}.php");
