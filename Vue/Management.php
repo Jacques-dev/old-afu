@@ -6,7 +6,14 @@
 
 
 <form id="addElementInSchool" action="../Controller/Manager.php" method="post">
-  <button type="submit" name="submitManagerEditing">Tout Enregistrer</button>
+
+  <button class="learn-more btn-1" type="submit" name="submitManagerEditing">
+    <span class="circle" aria-hidden="true">
+      <span class="icon arrow"></span>
+    </span>
+    <span class="button-text">Tout Enregistrer</span>
+  </button>
+
   <div class="container-fluid" id="manager">
     <div class="row">
       <div class="col-lg-3">

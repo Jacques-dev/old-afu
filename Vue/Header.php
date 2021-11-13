@@ -133,12 +133,12 @@
                 <li class="nav-item">
                   <a class="nav-link <?= $activePage === 'MarksForm' ? 'active' : '' ?>" href="Body?page=MarksForm">Mes notes</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <a class="nav-link <?= $activePage === 'Ranking' ? 'active' : '' ?>" href="Body?page=Ranking">Mon classement</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link <?= $activePage === 'Research' ? 'active' : '' ?>" href="Body?page=Research">Rechercher</a>
-                </li>
+                </li> -->
               <?php endif; ?>
             </ul>
           </div>
